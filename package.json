@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --mode development --host 0.0.0.0 --hot --open --useLocalIp"
+    "mobile": "webpack-dev-server --mode development --host 0.0.0.0 --hot --open --useLocalIp",
+    "start": "webpack-dev-server --mode development --hot --open",
+    "serve": "node ./dist/app.bundle.js"
   },
   "repository": {
     "type": "git",
@@ -20,18 +22,25 @@
   },
   "homepage": "https://github.com/KimGustafsson/web-playground#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "three": "^0.105.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^3.0.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1",
+    "webpack-node-externals": "^1.7.2",
     "workbox-webpack-plugin": "^4.3.1"
   }
 }
