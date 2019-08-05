@@ -9,7 +9,7 @@ class MainPage extends Component {
       return (
          <div>
             <h1>{this.props.text}</h1>
-            <h2>{`Nämen! Detta fungerar ju med ${this.props.text}`}</h2>
+            <h2>{`Wooohoo, it fukin works! ${this.props.text}`}</h2>
          </div>
       );
    };
