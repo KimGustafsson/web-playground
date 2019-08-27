@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import MainPage from './MainPage/MainPage.jsx';
+// import MainPage from './MainPage/MainPage.jsx';
 import ThreeTutorial from './ThreeTutorial/ThreeTutorial.jsx';
+import './App.css';
 
 class App extends Component {
    constructor() {
@@ -15,7 +16,7 @@ class App extends Component {
    render() {
       return (
          <div>
-            <MainPage text={this.state.test}></MainPage>
+            {/* <MainPage text={this.state.test}></MainPage> */}
             <ThreeTutorial></ThreeTutorial>
          </div>
       );
