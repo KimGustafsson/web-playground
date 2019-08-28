@@ -20,11 +20,11 @@ let wireframeCube;
 scene.add(pointLight);
 scene.add(ambientLight);
 scene.add(cube);
-wireframeCube = addSecondBox();
+wireframeCube = createSecondBox();
 scene.add(wireframeCube);
 camera.position.z = 5;
 
-function addSecondBox() {
+function createSecondBox() {
   let geometry = new THREE.BoxGeometry(3, 3, 3);
   let material = new THREE.MeshBasicMaterial({
     color: "#dadada",
@@ -42,7 +42,15 @@ function animate() {
   renderer.render(scene, camera)
 }
 
-console.log('yo');
+window.addEventListener('resize', () => {
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  scene.updateWorldMatrix();
+  camera.updateProjectionMatrix();
+})
 
 document.body.appendChild( renderer.domElement );
 
